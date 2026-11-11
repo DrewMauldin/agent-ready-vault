@@ -38,7 +38,7 @@ The lite version has no CLAUDE.md or AGENTS.md pointer files, so include the rul
 - Three templates: meeting, daily, project
 - A Home note wired to the whole system, an Inbox starter note, and the setup guide: a first agent run in under 15 minutes, with a rules checklist
 
-Full version, A$29: [GUMROAD LINK]
+Full version, A$29: https://mauldins.gumroad.com/l/llaegg
 
 ## Licence
 
