@@ -1,45 +1,36 @@
-# The Agent-Ready Vault (lite)
+# The Agent-Ready Vault (Lite)
 
-The free version of the Agent-Ready Vault: a folder skeleton and one rules file that let AI coding agents (Claude Code, Codex CLI, Cursor) help inside your Obsidian vault without mangling your notes.
+A starter Obsidian vault that puts your AI agent on a leash, then lets it work the night shift.
 
-## The method in four lines
+Most vault templates organise your notes. This one organises the agent. Inside is a rules file of twelve written rules your agent works under: read before editing, append instead of rewriting, never delete, mark every change, log every run, never send anything out of the vault, treat your recorded decisions as settled, and prove every claim that work is done. Two rules run the second half: when a decision is genuinely yours, the agent asks instead of guessing, by creating a short clarification task in Todoist; and when the agent runs unattended, it stays inside its brief, one queued job at a time, with a STOP file that halts everything.
 
-1. Rules before work: the agent reads System/AGENT-RULES.md before touching anything.
-2. Visible edits: every change is wrapped in %% ai edit %% comment blocks you can review in Obsidian.
-3. Nothing deleted: append by default; obsolete content gets flagged, never removed.
-4. Logged runs: the agent writes one log entry per session in agent-log/.
+The result is a second brain that can run itself on a schedule. You queue a job in the evening. Overnight the agent does the filing and the first pass, files your meeting transcripts, extracts the actions into Todoist, and writes a plain-language log of what it changed. What it sends you is not a report to wade through; it is the few decisions that were actually yours, waiting as tasks with the question, the context and the options. You answer, and the answer is recorded as settled, so you are never asked twice.
 
-## Folder structure
+This repository is the free lite version. It is a genuine working subset, not a screenshot of one.
 
-```
-your-vault/
-├── Home.md
-├── Inbox/
-├── System/
-│   └── AGENT-RULES.md
-└── agent-log/
-    └── 2026-01-01-example-run.md
-```
+## What lite includes
 
-## Using it
-
-1. Copy these folders into your vault, or open this folder as a new vault in Obsidian.
-2. Make a backup: `git init && git add -A && git commit -m "clean vault"`, or just copy the folder somewhere safe.
-3. Start your agent in the vault folder and paste:
-
-   > Read System/AGENT-RULES.md in full, then wait for my task.
-
-The lite version has no CLAUDE.md or AGENTS.md pointer files, so include the rules path in your prompts, or add those two files yourself: one sentence pointing at System/AGENT-RULES.md is enough.
+- System/AGENT-RULES.md: the full twelve rules, unchanged from the paid version
+- Sample Prompts.md: three of the sixteen prompts (daily note tidy-up, raising a clarification task instead of guessing, and making the agent prove a finished job)
+- System/templates/decisions.md: the decisions log template, the record that makes "settled means settled" and the clarification loop work
 
 ## What the full version adds
 
-- CLAUDE.md and AGENTS.md pointer files, so agents find the rules on their own
-- A skills system: an index plus three ready skills (daily note tidy, meeting note formatter, inbox triage) and a pattern for writing your own
-- Three templates: meeting, daily, project
-- A Home note wired to the whole system, an Inbox starter note, and the setup guide: a first agent run in under 15 minutes, with a rules checklist
+The full vault, at https://mauldins.gumroad.com/l/llaegg, adds the structure around the rules:
 
-Full version, A$29: https://mauldins.gumroad.com/l/llaegg
+- The complete starter vault: Home note, Inbox with a fictional sample meeting note to practise on, an agent-log format with a completed sample run
+- All sixteen prompts, including running the queue unattended, processing answered clarifications, and turning a meeting transcript into a filed note with actions and clarifications
+- The three workflow files: the autonomous run pattern (queue, brief template, approval gates, STOP file), the clarification loop in full with a worked example, and the transcript workflow
+- Three starter skills (daily note tidy, meeting note formatter, inbox triage) plus an index that shows how to write your own
+- A verification checklist for checking an agent's run log against the files, worked examples of good and bad runs, and meeting, daily and project templates alongside the decisions log
+- A setup guide that walks from opening the vault to scheduling overnight runs, and a licence covering all your own machines, with updates included
+
+## Using lite
+
+1. Copy System/AGENT-RULES.md into your own vault, or open this folder as a vault in Obsidian to look around first.
+2. Start your agent (Claude Code, Codex CLI, Cursor) inside the folder and tell it to read System/AGENT-RULES.md before it touches anything.
+3. Try the daily tidy prompt from Sample Prompts.md on a copy of a real note, and check its work: your words untouched, its additions inside `%% ai edit %%` blocks, a run log entry written.
 
 ## Licence
 
-Free for personal use. Share it, fork it, adapt the rules to your own vault. Attribution appreciated, never required.
+See LICENCE.md in this repository. Short version: personal use on your own machines, no redistribution.
