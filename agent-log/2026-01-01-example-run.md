@@ -7,8 +7,13 @@ This file is an example of the required format. Keep it, and copy this structure
 - rules read: yes, System/AGENT-RULES.md in full
 - task: what the human asked for, in one line
 - files read: Inbox/what-goes-here.md
-- files changed: none (example entry)
+- files created: none (example entry)
+- files changed (with blocks): none (example entry)
 - ai edit blocks added: none (example entry)
 - deleted: nothing (this is a standing rule)
+- moved: nothing (example entry)
+- sent externally: nothing (example entry)
+- decisions applied: none (example entry)
+- checks performed: none (example entry)
 - outcome: example; real entries use done, blocked or needs human
 - follow-ups: anything the human should look at, or "none"
