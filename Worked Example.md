@@ -43,4 +43,4 @@ Open items:
 
 Three things to check against the rules: the raw capture is untouched, word for word. The one decision is quoted, not paraphrased. Nothing was invented: the capture never gives the meeting a calendar date, so the formatted block does not add one.
 
-The run also produces a log entry: see agent-log/2026-01-02-example-run-completed.md.
+The run also produces a log entry in agent-log/, in the format of agent-log/2026-01-01-example-run.md.
