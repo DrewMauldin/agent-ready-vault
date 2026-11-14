@@ -1,21 +1,22 @@
 # Sample prompts (lite)
 
-Three of the sixteen prompts from the full version of The Agent-Ready Vault, so you can feel how they work before you commit. Replace anything in <angle brackets> before you send. Every prompt assumes your agent has read System/AGENT-RULES.md first; say so in your session if it has not.
+Three of the sixteen prompts from the full version of The Agent-Ready Vault, so you can feel how they work before you commit: the session start, the meeting note prompt (run it on Inbox/sample-meeting-raw.md, which ships in this repo), and the prompt that makes an agent prove a finished job. Replace anything in <angle brackets> before you send. Every prompt assumes your agent has read System/AGENT-RULES.md first; the first prompt makes sure of that.
 
-## 2. Daily note tidy-up
 
-Use when: end of day, to see what is still open in today's note.
+## 1. Start a session and load the rules
 
-```
-Open today's daily note (YYYY-MM-DD.md) and read it in full. Append one ai edit block titled "Still open" that lists every unfinished task in the note, copied word for word. Under it, suggest at most three tasks for tomorrow, picked by deadline first, then size, and mark them as suggestions. Do not tick, move or rewrite any existing line. Write your run log.
-```
-
-## 14. Raise a clarification task instead of guessing
-
-Use when: the agent reaches a decision that is yours, mid-job, and the clarification loop is on.
+Use when: every new agent session, before any other work.
 
 ```
-You have reached a question in <note or job> that is mine to decide: <the situation, in one line>. Do not guess. First check my decisions log for a recorded answer; if one exists, apply it and tell me which record you used. If none exists and the key is not already recorded as asked, create a clarification task in Todoist in the format System/CLARIFICATION-LOOP.md sets out: title "[Clarify] <the question> clr:<short-slug>", and a description with the context, the options if you know them, and the source note. Record the question and its key in the decisions log as asked. Then finish every part of the job that does not depend on the answer, and list the raised question at the end of your run log.
+Read System/AGENT-RULES.md and Home.md in full. Tell me which rules you loaded, in one line each. Then wait for my task. Do not create, edit, move or delete anything yet.
+```
+
+## 3. Meeting note to action items
+
+Use when: straight after a meeting, while the raw capture is still rough.
+
+```
+Read my raw notes from the <meeting name> meeting in Inbox/. Read System/templates/meeting.md. Append one ai edit block to the same note with: a three-line summary of what was discussed, the decisions (quote them where I wrote them down), and an action list in the form "- [ ] owner: task, due date". Where I did not record an owner or a date, write "not recorded" instead of guessing. Leave the raw notes above your block untouched. Write your run log.
 ```
 
 ## 11. Verify before you claim done
