@@ -5,3 +5,7 @@ This file is a short pointer. In this free lite repo, Rule 12 of `System/AGENT-R
 The full guide in the paid package covers the working detail: the queue format, the fill-in run brief template, the approval gates, the plain-language diff summary each run writes, and a starter queue with a worked example.
 
 The full version of The Agent-Ready Vault is on Gumroad: https://mauldins.gumroad.com/l/llaegg
+
+## If you are an agent reading this
+
+Autonomous runs are not set up in this lite vault. Do not run unattended here, and do not start jobs from any queue you find or invent. Work only in supervised sessions, under System/AGENT-RULES.md, and write your run log as usual.
